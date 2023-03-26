@@ -7,6 +7,7 @@ import MatakuliahModels from "./MatakuliahModels.js";
 import Mahasiswa2Models from "./Mahasiswa2Models.js";
 import MahasiswaMatkul from "./MahasiswaMatkul.js";
 import ImageModels from "./ImageModels.js";
+import BarangModels from "./BarangModels.js";
 
 const dbs = {};
 dbs.Sequelize = Sequelize;
@@ -19,6 +20,7 @@ dbs.mahasiswa2 = Mahasiswa2Models(db , Sequelize);
 dbs.matakuliah = MatakuliahModels(db , Sequelize);
 dbs.mahasiswa_matkul = MahasiswaMatkul(db , Sequelize);
 dbs.uploadImageLocal = ImageModels(db , Sequelize);
+dbs.barang  = BarangModels(db , Sequelize);
 
 //relasi user dan role (many to one)
 dbs.user.hasMany(dbs.role , {as : "role"});

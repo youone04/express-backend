@@ -12,6 +12,7 @@ import routerMahasiswa from "./router/mahasiswa/index.js";
 import routerMatakuliah from "./router/matakuliah/index.js";
 import routerUpload from "./router/upload/index.js";
 import routerUser from "./router/user/index.js";
+import routerBarang from "./router/barang/index.js";
 
 
 const app  = express();
@@ -29,6 +30,7 @@ try{
     // await dbs.matakuliah.sync();
     // await dbs.mahasiswa_matkul.sync();
     // await dbs.uploadImageLocal.sync();
+    // await dbs.barang.sync()
 
 
 }catch(e){
@@ -52,6 +54,8 @@ app.use('/api',routerMahasiswa);
 app.use('/api',routerMatakuliah);
 app.use('/api',routerUpload);
 app.use('/api',routerUser);
+app.use('/api',routerBarang);
+
 
 app.listen(PORT , () => {
     console.log("apps running port 3100")

@@ -2,7 +2,6 @@ import express from "express";
 import { getMahasiswa2 } from "../../controller/mahasiswa/Mahasiswa2Controller.js";
 import { createMahaiswa, deleteMahasiswa } from "../../controller/mahasiswa/MahasiswaController.js";
 import { VerifyToken } from "../../middleware/verifyToken.js";
-
 const routerMahasiswa = express.Router();
 
 routerMahasiswa.get('/mahasiswa2' ,getMahasiswa2);
